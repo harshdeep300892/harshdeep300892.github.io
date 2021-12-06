@@ -1,11 +1,38 @@
-POST /echo/post/xml HTTP/1.1
-Host: reqbin.com
-Content-Type: application/xml
-Accept: application/xml
-Content-Length: 118
-      
-<?xml version="1.0" encoding="utf-8"?>
-<Request>
-    <Login>login</Login>
-    <Password>password</Password>
-</Request>
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+    </head>
+<body>
+<!--
+-->
+<h1>Login Page</h1>
+<p>Enter your credentials.</p>
+  <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+  <form action="action.html">
+  <label>Enter your email:
+      <input type="text" id="email" name="email" required></label><br><br>
+    <input type="submit" value="Submit" onclick="getData()" />
+    
+</form>
+    </fieldset>
+    
+
+</body>
+    
+<script>
+    function getData()
+    {
+        //gettting the values
+        var email = document.getElementById("email").value;
+        //saving the values in local storage
+        localStorage.setItem("txtValue", email);
+    }
+    </script>
+    
+
+                                                                     
+
+</html>
